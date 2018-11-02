@@ -5,6 +5,9 @@
 When developing a Web application as we saw in previous lesson, the request/response cycle is a useful guide to see how all the components of the app fit together. The request/response cycle traces how a user's request flows through the app. Understanding the request/response cycle is helpful to figure out which files to edit when developing an app (and where to look when things aren't working). This lesson will show how this setup works using python. 
 
 ## Objectives
+
+You will be able to: 
+
 * Understand and explain the HTTP Request/Response cycle
 * Make http requests in Python using the ‘requests’ library
 
@@ -31,7 +34,7 @@ import requests
 # Code here 
 ```
 
-### The `.get()` Method
+## The `.get()` Method
 
 Now we have requests library ready in our working environment, we can start making some requests using the `.get()` method as shown below:
 ```python
@@ -46,7 +49,7 @@ resp = requests.get('https://www.google.com')
 
 GET is by far the most used HTTP method. We can use GET request to retrieve data from any destination. 
 
-### Status Codes
+## Status Codes
 The request we make may not be always successful. The best way is to check the status code which gets returned with the response. Here is how you would do this. 
 ```python
 # Check the returned status code
@@ -60,7 +63,7 @@ resp.status_code == requests.codes.ok
 
 So this is a good check to see if our request was successful. Depending on the status of the web server, the access rights of the clients and availibility of requested information. A web server may return a number of status codes within the response. Wikipedia has an exhaustive details on all these codes. [Check them out here](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
-### Response Contents
+## Response Contents
 Once we know that our request was successful and we have a valid response, we can check the returned information using `.text` property of the response object. 
 ```python
 print (resp.text)
@@ -73,7 +76,7 @@ print (resp.text)
 
 So this returns a lot of information which by default is not really human understandable due to data encoding, HTML tags and other styling information that only a web browser can truly translate. In later lessons we shall look at how we can use ** Regular Exprerssions**  to clean this information and extract the required bits and pieces for analysis. 
 
-### Response Headers
+## Response Headers
 The response of an HTTP request can contain many headers that holds different bits of information. We can use `.header` property of the response object to access the header information as shown below:
 
 ```python
@@ -97,7 +100,6 @@ print(resp.headers['server'])   # Server type (google web service - GWS)
 
 ```python
 # Code here 
-
 ```
 
 ## Try `httpbin`
@@ -143,7 +145,7 @@ print(r.headers['via'])
 # Code here 
 ```
 
-### Passing Parameters in GET
+## Passing Parameters in GET
 In some cases, you'll need to pass parameters along with your GET requests. These extra parameters usually take the the form of query strings added to the requested URL. To do this, we need to pass these values in the `params` parameter. Let's try to acces information from `httpbin` with some user information. 
 
 Note: The user information is not getting authenticated at `httpbin` so any name/password will work fine. This is merely for practice. 
