@@ -1,5 +1,5 @@
 
-# HTTP Request/Response Cycle - Code along
+# HTTP Request/Response Cycle - Codealong
 
 ##  Introduction
 When developing a Web application as we saw in previous lesson, the request/response cycle is a useful guide to see how all the components of the app fit together. The request/response cycle traces how a user's request flows through the app. Understanding the request/response cycle is helpful to figure out which files to edit when developing an app (and where to look when things aren't working). This lesson will show how this setup works using python. 
