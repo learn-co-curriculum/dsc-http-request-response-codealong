@@ -11,14 +11,13 @@ You will be able to:
 * Understand and explain the HTTP Request/Response cycle
 * Make http requests in Python using the ‘requests’ library
 
-
 ## The `requests` Library in Python
 
 Dealing with HTTP requests could be a challenging task  any programming language. Python with two built-in modules, `urllib` and `urllib2` to handle these requests but these could be very confusing  and the documentation is not clear. This requires the programmer to write a lot of code to make even a simple HTTP request.
 
 To make these things simpler, one easy-to-use third-party library, known as` Requests`, is available and most developers prefer to use it instead or urllib/urllib2. It is an Apache2 licensed HTTP library powered by urllib3 and httplib. Requests is add-on library that allows you to send HTTP requests using Python. With this library, you can access content like web page headers, form data, files, and parameters via simple Python commands. It also allows you to access the response data in a simple way.
 
-![](logo.png)
+![](images/logo.png)
 
 Below is how you would install and import the requests library before making any requests. 
 ```python
@@ -61,7 +60,7 @@ resp.status_code == requests.codes.ok
 # Code here 
 ```
 
-So this is a good check to see if our request was successful. Depending on the status of the web server, the access rights of the clients and availibility of requested information. A web server may return a number of status codes within the response. Wikipedia has an exhaustive details on all these codes. [Check them out here](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+So this is a good check to see if our request was successful. Depending on the status of the web server, the access rights of the clients and availability of requested information. A web server may return a number of status codes within the response. Wikipedia has an exhaustive details on all these codes. [Check them out here](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
 
 ## Response Contents
 Once we know that our request was successful and we have a valid response, we can check the returned information using `.text` property of the response object. 
@@ -74,7 +73,7 @@ print (resp.text)
 # Code here 
 ```
 
-So this returns a lot of information which by default is not really human understandable due to data encoding, HTML tags and other styling information that only a web browser can truly translate. In later lessons we shall look at how we can use ** Regular Exprerssions**  to clean this information and extract the required bits and pieces for analysis. 
+So this returns a lot of information which by default is not really human understandable due to data encoding, HTML tags and other styling information that only a web browser can truly translate. In later lessons we'll learn how we can use **_Regular Expressions_**  to clean this information and extract the required bits and pieces for analysis. 
 
 ## Response Headers
 The response of an HTTP request can contain many headers that holds different bits of information. We can use `.header` property of the response object to access the header information as shown below:
@@ -103,7 +102,7 @@ print(resp.headers['server'])   # Server type (google web service - GWS)
 ```
 
 ## Try `httpbin`
-`httpbin.org` is a popular website to test different HTTP operation and practice with request-response cycles. Let's use httpbin/get to analyse the response to a GET request. First of all, we shall find out the response header and inspect how it looks. 
+`httpbin.org` is a popular website to test different HTTP operation and practice with request-response cycles. Let's use httpbin/get to analyse the response to a GET request. First of all, let's find out the response header and inspect how it looks. 
 
 ```python
 r = requests.get('http://httpbin.org/get')
@@ -146,7 +145,7 @@ print(r.headers['via'])
 ```
 
 ## Passing Parameters in GET
-In some cases, you'll need to pass parameters along with your GET requests. These extra parameters usually take the the form of query strings added to the requested URL. To do this, we need to pass these values in the `params` parameter. Let's try to acces information from `httpbin` with some user information. 
+In some cases, you'll need to pass parameters along with your GET requests. These extra parameters usually take the the form of query strings added to the requested URL. To do this, we need to pass these values in the `params` parameter. Let's try to access information from `httpbin` with some user information. 
 
 Note: The user information is not getting authenticated at `httpbin` so any name/password will work fine. This is merely for practice. 
 
@@ -186,8 +185,7 @@ print(r.text)
 # Code here  
 ```
 
-So this is a brief introduction to how you would send requests and get responses from a web server, while totally avoiding the web browser interface. Later we shall see how we can pick up the required data elements from the contents of the web page for analytical purpose. 
-
+This was a brief introduction to how you would send requests and get responses from a web server, while totally avoiding the web browser interface. Later we'll see how we can pick up the required data elements from the contents of the web page for analytical purpose. 
 
 ## Summary
-In this lesson, we provided an introduction to the `requests` library in python. We saw how to use the get method to send requests to web servers, check server status, look at the header elements of a web page and how to send extra parameters like user information. In the next lab, we shall look at  **POST** and the **GET** methods in action. 
+In this lesson, we provided an introduction to the `requests` library in python. We saw how to use the get method to send requests to web servers, check server status, look at the header elements of a web page and how to send extra parameters like user information. 
