@@ -21,7 +21,7 @@ To make these things simpler, one easy-to-use third-party library, known as` Req
 
 Below is how you would install and import the requests library before making any requests. 
 ```python
-# Uncomment and install requests if you dont have it already
+# Uncomment and install requests if you don't have it already
 # !pip install requests
 
 # Import requests to working environment
@@ -102,7 +102,7 @@ print(resp.headers['server'])   # Server type (google web service - GWS)
 ```
 
 ## Try `httpbin`
-`httpbin.org` is a popular website to test different HTTP operation and practice with request-response cycles. Let's use httpbin/get to analyse the response to a GET request. First of all, let's find out the response header and inspect how it looks. 
+`httpbin.org` is a popular website to test different HTTP operation and practice with request-response cycles. Let's use httpbin/get to analyze the response to a GET request. First of all, let's find out the response header and inspect how it looks. 
 
 ```python
 r = requests.get('http://httpbin.org/get')
