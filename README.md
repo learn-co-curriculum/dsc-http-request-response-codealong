@@ -150,7 +150,7 @@ In some cases, you'll need to pass parameters along with your GET requests. Thes
 Note: The user information is not getting authenticated at `httpbin` so any name/password will work fine. This is merely for practice. 
 
 ```python
-credentials = {'user_name': 'trump', 'password': 'donald'}  
+credentials = {'user_name': 'FlatironSchool', 'password': 'learnlovecode'}  
 r = requests.get('http://httpbin.org/get', params=credentials)
 
 print(r.url)  
