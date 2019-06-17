@@ -30,7 +30,7 @@ import requests
 
 
 ```python
-# Code here 
+# Code here
 ```
 
 ## The `.get()` Method
@@ -91,7 +91,6 @@ dict(resp.headers)
 The content of the headers is our required element. You can see the key-value pairs holding various pieces of  information about the resource and request. Let's try to parse some of these values using the requests library:
 
 ```python
-print(resp.headers['Content-Length'])  # length of the response
 print(resp.headers['Date'])  # Date the response was sent
 print(resp.headers['server'])   # Server type (google web service - GWS)
 ```
@@ -113,7 +112,6 @@ print(response['args'])
 print(response['headers'])  
 print(response['headers']['Accept'])  
 print(response['headers']['Accept-Encoding'])  
-print(response['headers']['Connection'])  
 print(response['headers']['Host'])  
 print(response['headers']['User-Agent'])  
 print(response['origin'])  
@@ -123,7 +121,6 @@ print(response['url'])
 
 ```python
 # Code here 
-
 ```
 
 Let's use `requests` object structure to parse the values of headers as we did above. 
@@ -136,7 +133,6 @@ print(r.headers['content-length'])
 print(r.headers['Content-Type'])  
 print(r.headers['Date'])  
 print(r.headers['server'])  
-print(r.headers['via'])  
 ```
 
 
@@ -172,8 +168,8 @@ import requests
 
 url = 'http://httpbin.org/post'  
 file_list = [  
-    ('image', ('fi.png', open('fi.png', 'rb'), 'image/png')),
-    ('image', ('fi2.jpeg', open('fi2.jpeg', 'rb'), 'image/png'))
+    ('image', ('fi.png', open('images/fi.png', 'rb'), 'image/png')),
+    ('image', ('fi2.jpeg', open('images/fi2.jpeg', 'rb'), 'image/png'))
 ]
 
 r = requests.post(url, files=file_list)  
