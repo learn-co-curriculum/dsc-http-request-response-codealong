@@ -2,14 +2,14 @@
 # HTTP Request/Response Cycle - Codealong
 
 ##  Introduction
-When developing a Web application as we saw in previous lesson, the request/response cycle is a useful guide to see how all the components of the app fit together. The request/response cycle traces how a user's request flows through the app. Understanding the request/response cycle is helpful to figure out which files to edit when developing an app (and where to look when things aren't working). This lesson will show how this setup works using python. 
+When developing a Web application, as we saw in the previous lesson, the request/response cycle is a useful guide to see how all the components of the app fit together. The request/response cycle traces how a user's request flows through the app. Understanding the request/response cycle is helpful to figure out which files to edit when developing an app (and where to look when things aren't working). This lesson will show how this setup works using python. 
 
 ## Objectives
 
 You will be able to: 
 
 * Understand and explain the HTTP Request/Response cycle
-* Make http requests in Python using the ‘requests’ library
+* Make HTTP requests in Python using the ‘requests’ library
 
 ## The `requests` Library in Python
 
@@ -60,7 +60,7 @@ resp.status_code == requests.codes.ok
 # Code here 
 ```
 
-So this is a good check to see if our request was successful. Depending on the status of the web server, the access rights of the clients and availability of requested information. A web server may return a number of status codes within the response. Wikipedia has an exhaustive details on all these codes. [Check them out here](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
+So this is a good check to see if our request was successful. Depending on the status of the web server, the access rights of the clients and the availability of requested information. A web server may return a number of status codes within the response. Wikipedia has an exhaustive details on all these codes. [Check them out here](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
 
 ## Response Contents
 Once we know that our request was successful and we have a valid response, we can check the returned information using `.text` property of the response object. 
@@ -73,7 +73,7 @@ print (resp.text)
 # Code here 
 ```
 
-So this returns a lot of information which by default is not really human understandable due to data encoding, HTML tags and other styling information that only a web browser can truly translate. In later lessons we'll learn how we can use **_Regular Expressions_**  to clean this information and extract the required bits and pieces for analysis. 
+So this returns a lot of information which by default is not really human-understandable due to data encoding, HTML tags and other styling information that only a web browser can truly translate. In later lessons, we'll learn how we can use **_Regular Expressions_**  to clean this information and extract the required bits and pieces for analysis. 
 
 ## Response Headers
 The response of an HTTP request can contain many headers that holds different bits of information. We can use `.header` property of the response object to access the header information as shown below:
@@ -101,7 +101,7 @@ print(resp.headers['server'])   # Server type (google web service - GWS)
 ```
 
 ## Try `httpbin`
-`httpbin.org` is a popular website to test different HTTP operation and practice with request-response cycles. Let's use httpbin/get to analyze the response to a GET request. First of all, let's find out the response header and inspect how it looks. 
+`httpbin.org` is a popular website to test different HTTP operations and practice with request-response cycles. Let's use httpbin/get to analyze the response to a GET request. First of all, let's find out the response header and inspect how it looks. 
 
 ```python
 r = requests.get('http://httpbin.org/get')
@@ -181,7 +181,7 @@ print(r.text)
 # Code here  
 ```
 
-This was a brief introduction to how you would send requests and get responses from a web server, while totally avoiding the web browser interface. Later we'll see how we can pick up the required data elements from the contents of the web page for analytical purpose. 
+This was a brief introduction to how you would send requests and get responses from a web server, while totally avoiding the web browser interface. Later we'll see how we can pick up the required data elements from the contents of the web page for analytical purposes. 
 
 ## Summary
 In this lesson, we provided an introduction to the `requests` library in python. We saw how to use the get method to send requests to web servers, check server status, look at the header elements of a web page and how to send extra parameters like user information. 
