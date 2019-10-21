@@ -8,8 +8,10 @@ When developing a Web application, as we saw in the previous lesson, the request
 
 You will be able to: 
 
-* Understand and explain the HTTP Request/Response cycle
-* Make HTTP requests in Python using the ‘requests’ library
+* Explain the HTTP request/response cycle
+* List the status codes of responses and their meanings
+* Obtain and interpret status codes from responses
+* Make HTTP GET and POST requests in python using the `requests` library
 
 ## The `requests` Library in Python
 
