@@ -143,7 +143,7 @@ print(r.headers['server'])
 ```
 
 ## Passing Parameters in GET
-In some cases, you'll need to pass parameters along with your GET requests. These extra parameters usually take the the form of query strings added to the requested URL. To do this, we need to pass these values in the `params` parameter. Let's try to access information from `httpbin` with some user information. 
+In some cases, you'll need to pass parameters along with your GET requests. These extra parameters usually take the form of query strings added to the requested URL. To do this, we need to pass these values in the `params` parameter. Let's try to access information from `httpbin` with some user information. 
 
 Note: The user information is not getting authenticated at `httpbin` so any name/password will work fine. This is merely for practice. 
 
