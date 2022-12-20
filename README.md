@@ -1,4 +1,3 @@
-
 # HTTP Request/Response Cycle - Codealong
 
 ##  Introduction
@@ -171,7 +170,7 @@ import requests
 url = 'http://httpbin.org/post'  
 file_list = [  
     ('image', ('fi.png', open('images/fi.png', 'rb'), 'image/png')),
-    ('image', ('fi2.jpeg', open('images/fi2.jpeg', 'rb'), 'image/png'))
+    ('image', ('fi2.jpeg', open('images/fi2.jpeg', 'rb'), 'image/jpeg'))
 ]
 
 r = requests.post(url, files=file_list)  
