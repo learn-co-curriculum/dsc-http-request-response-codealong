@@ -1,4 +1,3 @@
-
 # HTTP Request/Response Cycle - Codealong
 
 ##  Introduction
@@ -17,7 +16,7 @@ You will be able to:
 
 Dealing with HTTP requests could be a challenging task  any programming language. Python with two built-in modules, `urllib` and `urllib2` to handle these requests but these could be very confusing  and the documentation is not clear. This requires the programmer to write a lot of code to make even a simple HTTP request.
 
-To make these things simpler, one easy-to-use third-party library, known as` Requests`, is available and most developers prefer to use it instead or urllib/urllib2. It is an Apache2 licensed HTTP library powered by urllib3 and httplib. Requests is an add-on library that allows you to send HTTP requests using Python. With this library, you can access content like web page headers, form data, files, and parameters via simple Python commands. It also allows you to access the response data in a simple way.
+To make these things simpler, one easy-to-use third-party library, known as` Requests`, is available and most developers prefer to use it instead or urllib/urllib2. It is an Apache2 licensed HTTP library powered by urllib3 and httplib. Requests is add-on library that allows you to send HTTP requests using Python. With this library, you can access content like web page headers, form data, files, and parameters via simple Python commands. It also allows you to access the response data in a simple way.
 
 ![](images/logo.png)
 
@@ -143,7 +142,7 @@ print(r.headers['server'])
 ```
 
 ## Passing Parameters in GET
-In some cases, you'll need to pass parameters along with your GET requests. These extra parameters usually take the form of query strings added to the requested URL. To do this, we need to pass these values in the `params` parameter. Let's try to access information from `httpbin` with some user information. 
+In some cases, you'll need to pass parameters along with your GET requests. These extra parameters usually take the the form of query strings added to the requested URL. To do this, we need to pass these values in the `params` parameter. Let's try to access information from `httpbin` with some user information. 
 
 Note: The user information is not getting authenticated at `httpbin` so any name/password will work fine. This is merely for practice. 
 
@@ -171,7 +170,7 @@ import requests
 url = 'http://httpbin.org/post'  
 file_list = [  
     ('image', ('fi.png', open('images/fi.png', 'rb'), 'image/png')),
-    ('image', ('fi2.jpeg', open('images/fi2.jpeg', 'rb'), 'image/png'))
+    ('image', ('fi2.jpeg', open('images/fi2.jpeg', 'rb'), 'image/jpeg'))
 ]
 
 r = requests.post(url, files=file_list)  
