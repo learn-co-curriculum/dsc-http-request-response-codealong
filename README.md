@@ -39,7 +39,7 @@ import requests
 Now we have requests library ready in our working environment, we can start making some requests using the `.get()` method as shown below:
 ```python
 ### Making a request
-resp = requests.get('https://www.google.com')
+resp = requests.get('https://matplotlib.org/')
 ```
 
 
